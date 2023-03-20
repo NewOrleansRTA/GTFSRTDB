@@ -114,8 +114,8 @@ The location to store log fle can be changed in `logging.conf` under [handler_fi
 1. The script will not work with the GTFS-RT 1.0.
 2. When deploying to Linux server, we encountered an ERROR pertaining the import of the gtfs-realtime-bindings package. *ModuleNotFoundError: No module named 'googletrans'* -- or -- *ModuleNotFoundError: No module named 'google'*. To address the issue, instead of using the  gtfs-realtime-bindings package, use the norta_gtfs_realtime functions and import them into the .py file by commeting and uncommenting the following lines:
 
-#from google.transit import gtfs_realtime_pb2
-#import norta_gtfs_realtime_pb2 as gtfs_realtime_pb2
+    from google.transit import gtfs_realtime_pb2
+    import norta_gtfs_realtime_pb2 as gtfs_realtime_pb2
 
 
 
