@@ -81,7 +81,9 @@ postgres://[user]:[password]@[host]:[port]/[database]
 ```
 python gtfsrtdb.py -p 'https://ULR.com/v2/gtfsrt/vehiclePositions' --database="postgresql+psycopg2://[user]:[password]@[host]:[port]/[database]" --apikey="<Your API Key>" --wait=10 -c
 
+```
 
+```
 python gtfsrtdb.py -t=https://ULR.com/v2/gtfsrt/trips' -p=https://ULR.com/v2/gtfsrt/vehicles -a=https://ULR.com/v2/gtfsrt/gtfsrt/alerts --database="postgresql+psycopg2://[user]:[password]@[host]:[port]/[database]" --apikey="<Your API Key>" --wait=10 -c
 
 ```
@@ -113,7 +115,7 @@ The location to store log fle can be changed in `logging.conf` under [handler_fi
 2. When deploying to Linux server, we encountered an ERROR pertaining the import of the gtfs-realtime-bindings package. *ModuleNotFoundError: No module named 'googletrans'* -- or -- *ModuleNotFoundError: No module named 'google'*. To address the issue, instead of using the  gtfs-realtime-bindings package, use the norta_gtfs_realtime functions and import them into the .py file by commeting and uncommenting the following lines:
 
 #from google.transit import gtfs_realtime_pb2
-import norta_gtfs_realtime_pb2 as gtfs_realtime_pb2
+#import norta_gtfs_realtime_pb2 as gtfs_realtime_pb2
 
 
 
